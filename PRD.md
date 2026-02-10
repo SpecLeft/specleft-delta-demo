@@ -6,6 +6,8 @@ A multi-step document approval workflow API built with FastAPI and SQLAlchemy. D
 
 The initial goal is to support core approval flows with enforcement of business rules around state transitions, delegation, and escalation.
 
+Tech Stack: UV, Python 3.12.5 + FastAPI + SQLAlchemy + SQLite + pytest
+
 ---
 
 ## Feature 1: Document Lifecycle
