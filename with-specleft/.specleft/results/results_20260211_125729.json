@@ -1,0 +1,321 @@
+{
+  "run_id": "2026-02-11T12:57:29.291271",
+  "summary": {
+    "total_features": 1,
+    "total_scenarios": 5,
+    "total_executions": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "duration": 0.075
+  },
+  "features": [
+    {
+      "feature_id": "feature-4-escalation",
+      "feature_name": "4: Escalation",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "auto-escalate-after-configurable-timeout",
+          "scenario_name": "Auto-escalate after configurable timeout",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "auto-escalate-after-configurable-timeout",
+              "test_name": "test_auto_escalate_after_configurable_timeout",
+              "original_name": "test_auto_escalate_after_configurable_timeout",
+              "nodeid": "tests/test_feature-4-escalation.py::test_auto_escalate_after_configurable_timeout",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Auto-escalate after configurable timeout",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.022407917072996497,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.014173,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the configured timeout period elapses without all reviewers acting",
+                  "status": "passed",
+                  "duration": 0.005921,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document is escalated to the next-level approver",
+                  "status": "passed",
+                  "duration": 1.1e-05,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the escalation is recorded with a timestamp",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-notifies-next-level-approver",
+          "scenario_name": "Escalation notifies next-level approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-notifies-next-level-approver",
+              "test_name": "test_escalation_notifies_next_level_approver",
+              "original_name": "test_escalation_notifies_next_level_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_notifies_next_level_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation notifies next-level approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.012112541939131916,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated",
+                  "status": "passed",
+                  "duration": 0.00627,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the escalation is triggered",
+                  "status": "passed",
+                  "duration": 0.004024,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the next-level approver is added to the reviewer list",
+                  "status": "passed",
+                  "duration": 0.001611,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a notification is generated for the new approver",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-resets-timeout-for-new-approver",
+          "scenario_name": "Escalation resets timeout for new approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-resets-timeout-for-new-approver",
+              "test_name": "test_escalation_resets_timeout_for_new_approver",
+              "original_name": "test_escalation_resets_timeout_for_new_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_resets_timeout_for_new_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation resets timeout for new approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.01143141696229577,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated to a new approver",
+                  "status": "passed",
+                  "duration": 0.009667,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the escalation is processed",
+                  "status": "passed",
+                  "duration": 0.001556,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then a new timeout period begins for the escalated approver",
+                  "status": "passed",
+                  "duration": 1.3e-05,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the original timeout is no longer active",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "maximum-escalation-depth-is-enforced",
+          "scenario_name": "Maximum escalation depth is enforced",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "maximum-escalation-depth-is-enforced",
+              "test_name": "test_maximum_escalation_depth_is_enforced",
+              "original_name": "test_maximum_escalation_depth_is_enforced",
+              "nodeid": "tests/test_feature-4-escalation.py::test_maximum_escalation_depth_is_enforced",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Maximum escalation depth is enforced",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.01814995799213648,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document that has already been escalated to the maximum depth",
+                  "status": "passed",
+                  "duration": 0.016077,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the escalation timeout elapses again",
+                  "status": "passed",
+                  "duration": 0.001869,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then no further escalation occurs",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error or warning is logged indicating max depth reached",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+          "scenario_name": "Original reviewer can still approve before escalation triggers",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+              "test_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "original_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "nodeid": "tests/test_feature-4-escalation.py::test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Original reviewer can still approve before escalation triggers",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.010641583008691669,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document approaching the escalation timeout",
+                  "status": "passed",
+                  "duration": 0.004882,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the original reviewer submits their decision before the timeout",
+                  "status": "passed",
+                  "duration": 0.003704,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the escalation is cancelled",
+                  "status": "passed",
+                  "duration": 0.001853,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document proceeds through normal approval flow",
+                  "status": "passed",
+                  "duration": 3e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,14 @@
 [project]
 name = "with-specleft"
 version = "0.1.0"
-description = "Add your description here"
+description = "Multi-step document approval workflow API"
 readme = "README.md"
 requires-python = ">=3.12.5"
-dependencies = []
+dependencies = [
+    "specleft>=0.2.2",
+    "fastapi>=0.115.0",
+    "sqlalchemy>=2.0.0",
+    "uvicorn>=0.30.0",
+    "httpx>=0.27.0",
+    "pytest>=8.0.0",
+]
