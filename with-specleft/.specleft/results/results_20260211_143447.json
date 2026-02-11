@@ -1,0 +1,1651 @@
+{
+  "run_id": "2026-02-11T14:34:47.046792",
+  "summary": {
+    "total_features": 5,
+    "total_scenarios": 28,
+    "total_executions": 28,
+    "passed": 27,
+    "failed": 0,
+    "skipped": 1,
+    "duration": 0.257
+  },
+  "features": [
+    {
+      "feature_id": "feature-1-document-lifecycle",
+      "feature_name": "1: Document Lifecycle",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "approve-document-with-single-reviewer",
+          "scenario_name": "Approve document with single reviewer",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "approve-document-with-single-reviewer",
+              "test_name": "test_approve_document_with_single_reviewer",
+              "original_name": "test_approve_document_with_single_reviewer",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_approve_document_with_single_reviewer",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Approve document with single reviewer",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.020002166042104363,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with one assigned reviewer",
+                  "status": "passed",
+                  "duration": 0.014777,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the reviewer approves the document",
+                  "status": "passed",
+                  "duration": 0.003257,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"approved\"",
+                  "status": "passed",
+                  "duration": 0.001757,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the approval is recorded with a timestamp",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "create-document-as-draft",
+          "scenario_name": "Create document as draft",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "create-document-as-draft",
+              "test_name": "test_create_document_as_draft",
+              "original_name": "test_create_document_as_draft",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_create_document_as_draft",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Create document as draft",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.0014385839458554983,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a user with author permissions",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they create a new document",
+                  "status": "passed",
+                  "duration": 0.001296,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document is created with status \"draft\"",
+                  "status": "passed",
+                  "duration": 8e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document is assigned to the author",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "notes",
+              "test_name": "test_notes",
+              "original_name": "test_notes",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_notes",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "critical",
+              "status": "skipped",
+              "duration": 7.475004531443119e-05,
+              "error": null,
+              "steps": []
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 0,
+            "skipped": 1
+          }
+        },
+        {
+          "scenario_id": "prevent-edits-to-approved-documents",
+          "scenario_name": "Prevent edits to approved documents",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "prevent-edits-to-approved-documents",
+              "test_name": "test_prevent_edits_to_approved_documents",
+              "original_name": "test_prevent_edits_to_approved_documents",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_prevent_edits_to_approved_documents",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Prevent edits to approved documents",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007777667022310197,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"approved\" status",
+                  "status": "passed",
+                  "duration": 0.006346,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When any user attempts to edit the document",
+                  "status": "passed",
+                  "duration": 0.001291,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the edit is rejected",
+                  "status": "passed",
+                  "duration": 8e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating the document is locked",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-edits-to-documents-under-review",
+          "scenario_name": "Prevent edits to documents under review",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "prevent-edits-to-documents-under-review",
+              "test_name": "test_prevent_edits_to_documents_under_review",
+              "original_name": "test_prevent_edits_to_documents_under_review",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_prevent_edits_to_documents_under_review",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Prevent edits to documents under review",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.004548875032924116,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003502,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author attempts to edit the document",
+                  "status": "passed",
+                  "duration": 0.000934,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the edit is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating the document is under review",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reject-document-with-reason",
+          "scenario_name": "Reject document with reason",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "reject-document-with-reason",
+              "test_name": "test_reject_document_with_reason",
+              "original_name": "test_reject_document_with_reason",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_reject_document_with_reason",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Reject document with reason",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.0065307910554111,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003289,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When a reviewer rejects the document",
+                  "status": "passed",
+                  "duration": 0.001827,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 0.001296,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the rejection reason is recorded",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "submit-document-for-review",
+          "scenario_name": "Submit document for review",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "submit-document-for-review",
+              "test_name": "test_submit_document_for_review",
+              "original_name": "test_submit_document_for_review",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_submit_document_for_review",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Submit document for review",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007131375023163855,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"draft\" status",
+                  "status": "passed",
+                  "duration": 0.001164,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author submits it for review",
+                  "status": "passed",
+                  "duration": 0.002887,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"review\"",
+                  "status": "passed",
+                  "duration": 0.001466,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And all assigned reviewers are notified",
+                  "status": "passed",
+                  "duration": 0.001473,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-2-multi-reviewer-approval",
+      "feature_name": "2: Multi-Reviewer Approval",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "notes-1",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "notes-1",
+              "test_name": "test_notes_1",
+              "original_name": "test_notes_1",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_notes_1",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "critical",
+              "status": "passed",
+              "duration": 0.01736075000371784,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then reviewer decisions are immutable once submitted",
+                  "status": "passed",
+                  "duration": 0.008468,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And approval order does not matter",
+                  "status": "passed",
+                  "duration": 0.008723,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-duplicate-approval-from-same-reviewer",
+          "scenario_name": "Prevent duplicate approval from same reviewer",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "prevent-duplicate-approval-from-same-reviewer",
+              "test_name": "test_prevent_duplicate_approval_from_same_reviewer",
+              "original_name": "test_prevent_duplicate_approval_from_same_reviewer",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_prevent_duplicate_approval_from_same_reviewer",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Prevent duplicate approval from same reviewer",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006952665979042649,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a reviewer who has already approved a document",
+                  "status": "passed",
+                  "duration": 0.005498,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they attempt to approve the same document again",
+                  "status": "passed",
+                  "duration": 0.001291,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the request is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating they have already submitted a decision",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reject-if-any-reviewer-rejects",
+          "scenario_name": "Reject if any reviewer rejects",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "reject-if-any-reviewer-rejects",
+              "test_name": "test_reject_if_any_reviewer_rejects",
+              "original_name": "test_reject_if_any_reviewer_rejects",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_reject_if_any_reviewer_rejects",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Reject if any reviewer rejects",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.00686083291657269,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with multiple reviewers",
+                  "status": "passed",
+                  "duration": 0.003586,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When one reviewer rejects the document",
+                  "status": "passed",
+                  "duration": 0.001925,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 0.001211,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And remaining reviewers are no longer required to act",
+                  "status": "passed",
+                  "duration": 6e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "require-all-assigned-reviewers-to-approve",
+          "scenario_name": "Require all assigned reviewers to approve",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "require-all-assigned-reviewers-to-approve",
+              "test_name": "test_require_all_assigned_reviewers_to_approve",
+              "original_name": "test_require_all_assigned_reviewers_to_approve",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_require_all_assigned_reviewers_to_approve",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Require all assigned reviewers to approve",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.00815329106990248,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with three assigned reviewers",
+                  "status": "passed",
+                  "duration": 0.003491,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When only two reviewers have approved",
+                  "status": "passed",
+                  "duration": 0.00326,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document remains in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.001278,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the pending reviewer is visible in the status response",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "track-individual-reviewer-decisions-with-timestamps",
+          "scenario_name": "Track individual reviewer decisions with timestamps",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "track-individual-reviewer-decisions-with-timestamps",
+              "test_name": "test_track_individual_reviewer_decisions_with_timestamps",
+              "original_name": "test_track_individual_reviewer_decisions_with_timestamps",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_track_individual_reviewer_decisions_with_timestamps",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Track individual reviewer decisions with timestamps",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006999333971180022,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003532,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When a reviewer submits their decision",
+                  "status": "passed",
+                  "duration": 0.001999,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the decision is recorded with the reviewer ID and timestamp",
+                  "status": "passed",
+                  "duration": 0.001335,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the decision is visible in the document review history",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-3-delegation",
+      "feature_name": "3: Delegation",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "delegate-review-to-substitute-with-expiry-date",
+          "scenario_name": "Delegate review to substitute with expiry date",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "delegate-review-to-substitute-with-expiry-date",
+              "test_name": "test_delegate_review_to_substitute_with_expiry_date",
+              "original_name": "test_delegate_review_to_substitute_with_expiry_date",
+              "nodeid": "tests/test_feature-3-delegation.py::test_delegate_review_to_substitute_with_expiry_date",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Delegate review to substitute with expiry date",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006580832996405661,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a reviewer assigned to a document",
+                  "status": "passed",
+                  "duration": 0.003752,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they delegate to a substitute with an expiry date",
+                  "status": "passed",
+                  "duration": 0.002714,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the substitute is granted review permissions for that document",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the delegation record includes the expiry timestamp",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "delegator-can-revoke-delegation-before-expiry",
+          "scenario_name": "Delegator can revoke delegation before expiry",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "delegator-can-revoke-delegation-before-expiry",
+              "test_name": "test_delegator_can_revoke_delegation_before_expiry",
+              "original_name": "test_delegator_can_revoke_delegation_before_expiry",
+              "nodeid": "tests/test_feature-3-delegation.py::test_delegator_can_revoke_delegation_before_expiry",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Delegator can revoke delegation before expiry",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.008714749943464994,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given an active delegation",
+                  "status": "passed",
+                  "duration": 0.004922,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the delegator revokes the delegation",
+                  "status": "passed",
+                  "duration": 0.001774,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the substitute loses review permissions immediately",
+                  "status": "passed",
+                  "duration": 0.001899,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And subsequent actions by the substitute are rejected",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "expired-delegation-is-rejected",
+          "scenario_name": "Expired delegation is rejected",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "expired-delegation-is-rejected",
+              "test_name": "test_expired_delegation_is_rejected",
+              "original_name": "test_expired_delegation_is_rejected",
+              "nodeid": "tests/test_feature-3-delegation.py::test_expired_delegation_is_rejected",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Expired delegation is rejected",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006798583082854748,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a delegation that has passed its expiry date",
+                  "status": "passed",
+                  "duration": 0.005324,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute attempts to approve the document",
+                  "status": "passed",
+                  "duration": 0.001358,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the approval is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating the delegation has expired",
+                  "status": "passed",
+                  "duration": 4e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-2",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "notes-2",
+              "test_name": "test_notes_2",
+              "original_name": "test_notes_2",
+              "nodeid": "tests/test_feature-3-delegation.py::test_notes_2",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.012220500037074089,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then delegation does not transfer to other documents",
+                  "status": "passed",
+                  "duration": 0.010497,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a reviewer can only have one active delegation per document",
+                  "status": "passed",
+                  "duration": 0.001566,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-delegation-chain",
+          "scenario_name": "Prevent delegation chain",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "prevent-delegation-chain",
+              "test_name": "test_prevent_delegation_chain",
+              "original_name": "test_prevent_delegation_chain",
+              "nodeid": "tests/test_feature-3-delegation.py::test_prevent_delegation_chain",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Prevent delegation chain",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006357750040479004,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a substitute who has been delegated review authority",
+                  "status": "passed",
+                  "duration": 0.005071,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute attempts to delegate to another person",
+                  "status": "passed",
+                  "duration": 0.001175,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the delegation is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating re-delegation is not permitted",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "substitute-can-approve-on-behalf-of-delegator",
+          "scenario_name": "Substitute can approve on behalf of delegator",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "substitute-can-approve-on-behalf-of-delegator",
+              "test_name": "test_substitute_can_approve_on_behalf_of_delegator",
+              "original_name": "test_substitute_can_approve_on_behalf_of_delegator",
+              "nodeid": "tests/test_feature-3-delegation.py::test_substitute_can_approve_on_behalf_of_delegator",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Substitute can approve on behalf of delegator",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.008873499929904938,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a valid delegation that has not expired",
+                  "status": "passed",
+                  "duration": 0.005273,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute approves the document",
+                  "status": "passed",
+                  "duration": 0.002324,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the approval is recorded as the substitute acting on behalf of the delegator",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the delegator's review requirement is satisfied",
+                  "status": "passed",
+                  "duration": 0.001148,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-4-escalation",
+      "feature_name": "4: Escalation",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "auto-escalate-after-configurable-timeout",
+          "scenario_name": "Auto-escalate after configurable timeout",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "auto-escalate-after-configurable-timeout",
+              "test_name": "test_auto_escalate_after_configurable_timeout",
+              "original_name": "test_auto_escalate_after_configurable_timeout",
+              "nodeid": "tests/test_feature-4-escalation.py::test_auto_escalate_after_configurable_timeout",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Auto-escalate after configurable timeout",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007671082974411547,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.004101,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the configured timeout period elapses without all reviewers acting",
+                  "status": "passed",
+                  "duration": 0.003412,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document is escalated to the next-level approver",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the escalation is recorded with a timestamp",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-notifies-next-level-approver",
+          "scenario_name": "Escalation notifies next-level approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-notifies-next-level-approver",
+              "test_name": "test_escalation_notifies_next_level_approver",
+              "original_name": "test_escalation_notifies_next_level_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_notifies_next_level_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation notifies next-level approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.013425250072032213,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated",
+                  "status": "passed",
+                  "duration": 0.009558,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the escalation is triggered",
+                  "status": "passed",
+                  "duration": 0.001366,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the next-level approver is added to the reviewer list",
+                  "status": "passed",
+                  "duration": 0.002319,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a notification is generated for the new approver",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-resets-timeout-for-new-approver",
+          "scenario_name": "Escalation resets timeout for new approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-resets-timeout-for-new-approver",
+              "test_name": "test_escalation_resets_timeout_for_new_approver",
+              "original_name": "test_escalation_resets_timeout_for_new_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_resets_timeout_for_new_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation resets timeout for new approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.020356709021143615,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated to a new approver",
+                  "status": "passed",
+                  "duration": 0.014142,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the escalation is processed",
+                  "status": "passed",
+                  "duration": 0.005481,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then a new timeout period begins for the escalated approver",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the original timeout is no longer active",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-3",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "notes-3",
+              "test_name": "test_notes_3",
+              "original_name": "test_notes_3",
+              "nodeid": "tests/test_feature-4-escalation.py::test_notes_3",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "passed",
+              "duration": 0.0146636669524014,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then escalation timeout is configurable per document or organization",
+                  "status": "passed",
+                  "duration": 0.008592,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And maximum escalation depth is enforced",
+                  "status": "passed",
+                  "duration": 0.005706,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+          "scenario_name": "Original reviewer can still approve before escalation triggers",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+              "test_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "original_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "nodeid": "tests/test_feature-4-escalation.py::test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Original reviewer can still approve before escalation triggers",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.010080542066134512,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document approaching the escalation timeout",
+                  "status": "passed",
+                  "duration": 0.005007,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the original reviewer submits their decision before the timeout",
+                  "status": "passed",
+                  "duration": 0.002325,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the escalation is cancelled",
+                  "status": "passed",
+                  "duration": 0.001219,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document proceeds through normal approval flow",
+                  "status": "passed",
+                  "duration": 0.001338,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-5-edge-cases",
+      "feature_name": "5: Edge Cases",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "concurrent-approval-and-rejection-by-different-reviewers",
+          "scenario_name": "Concurrent approval and rejection by different reviewers",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "concurrent-approval-and-rejection-by-different-reviewers",
+              "test_name": "test_concurrent_approval_and_rejection_by_different_reviewers",
+              "original_name": "test_concurrent_approval_and_rejection_by_different_reviewers",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_concurrent_approval_and_rejection_by_different_reviewers",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Concurrent approval and rejection by different reviewers",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.011086707934737206,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with multiple reviewers",
+                  "status": "passed",
+                  "duration": 0.004808,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When one reviewer approves and another rejects simultaneously",
+                  "status": "passed",
+                  "duration": 0.004585,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the rejection takes precedence",
+                  "status": "passed",
+                  "duration": 0.001484,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-4",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "notes-4",
+              "test_name": "test_notes_4",
+              "original_name": "test_notes_4",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_notes_4",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.013685417012311518,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then conflict resolution rules are deterministic",
+                  "status": "passed",
+                  "duration": 0.011529,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And all edge case handling returns descriptive error messages",
+                  "status": "passed",
+                  "duration": 0.001957,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "resubmit-rejected-document-creates-new-review-cycle",
+          "scenario_name": "Resubmit rejected document creates new review cycle",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "resubmit-rejected-document-creates-new-review-cycle",
+              "test_name": "test_resubmit_rejected_document_creates_new_review_cycle",
+              "original_name": "test_resubmit_rejected_document_creates_new_review_cycle",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_resubmit_rejected_document_creates_new_review_cycle",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Resubmit rejected document creates new review cycle",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.014246333972550929,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"rejected\" status",
+                  "status": "passed",
+                  "duration": 0.008627,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author resubmits the document",
+                  "status": "passed",
+                  "duration": 0.002425,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"review\"",
+                  "status": "passed",
+                  "duration": 0.001633,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a new review cycle is created with fresh reviewer assignments",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And previous review history is preserved",
+                  "status": "passed",
+                  "duration": 0.001336,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reviewer-who-is-also-the-author-cannot-approve-own-document",
+          "scenario_name": "Reviewer who is also the author cannot approve own document",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "reviewer-who-is-also-the-author-cannot-approve-own-document",
+              "test_name": "test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "original_name": "test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Reviewer who is also the author cannot approve own document",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006125084008090198,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a user who is both the author and an assigned reviewer",
+                  "status": "passed",
+                  "duration": 0.004247,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they attempt to approve the document",
+                  "status": "passed",
+                  "duration": 0.001695,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the approval is rejected",
+                  "status": "passed",
+                  "duration": 9e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating self-approval is not permitted",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "submit-document-with-no-reviewers-assigned-returns-error",
+          "scenario_name": "Submit document with no reviewers assigned returns error",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "submit-document-with-no-reviewers-assigned-returns-error",
+              "test_name": "test_submit_document_with_no_reviewers_assigned_returns_error",
+              "original_name": "test_submit_document_with_no_reviewers_assigned_returns_error",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_submit_document_with_no_reviewers_assigned_returns_error",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Submit document with no reviewers assigned returns error",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.002560083055868745,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"draft\" status",
+                  "status": "passed",
+                  "duration": 0.00128,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author submits the document with no reviewers assigned",
+                  "status": "passed",
+                  "duration": 0.00111,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the submission is rejected",
+                  "status": "passed",
+                  "duration": 1.7e-05,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating at least one reviewer is required",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ]
+}

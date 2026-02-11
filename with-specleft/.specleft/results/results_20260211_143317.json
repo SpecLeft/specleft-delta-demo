@@ -1,0 +1,1560 @@
+{
+  "run_id": "2026-02-11T14:33:17.866757",
+  "summary": {
+    "total_features": 5,
+    "total_scenarios": 28,
+    "total_executions": 28,
+    "passed": 20,
+    "failed": 7,
+    "skipped": 1,
+    "duration": 0.213
+  },
+  "features": [
+    {
+      "feature_id": "feature-1-document-lifecycle",
+      "feature_name": "1: Document Lifecycle",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "approve-document-with-single-reviewer",
+          "scenario_name": "Approve document with single reviewer",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "approve-document-with-single-reviewer",
+              "test_name": "test_approve_document_with_single_reviewer",
+              "original_name": "test_approve_document_with_single_reviewer",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_approve_document_with_single_reviewer",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Approve document with single reviewer",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.036115208989940584,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with one assigned reviewer",
+                  "status": "passed",
+                  "duration": 0.031093,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the reviewer approves the document",
+                  "status": "passed",
+                  "duration": 0.003327,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"approved\"",
+                  "status": "passed",
+                  "duration": 0.001513,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the approval is recorded with a timestamp",
+                  "status": "passed",
+                  "duration": 3e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "create-document-as-draft",
+          "scenario_name": "Create document as draft",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "create-document-as-draft",
+              "test_name": "test_create_document_as_draft",
+              "original_name": "test_create_document_as_draft",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_create_document_as_draft",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Create document as draft",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.0014200829900801182,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a user with author permissions",
+                  "status": "passed",
+                  "duration": 3e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they create a new document",
+                  "status": "passed",
+                  "duration": 0.001299,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document is created with status \"draft\"",
+                  "status": "passed",
+                  "duration": 8e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document is assigned to the author",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "notes",
+              "test_name": "test_notes",
+              "original_name": "test_notes",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_notes",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "critical",
+              "status": "skipped",
+              "duration": 7.195805665105581e-05,
+              "error": null,
+              "steps": []
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 0,
+            "skipped": 1
+          }
+        },
+        {
+          "scenario_id": "prevent-edits-to-approved-documents",
+          "scenario_name": "Prevent edits to approved documents",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "prevent-edits-to-approved-documents",
+              "test_name": "test_prevent_edits_to_approved_documents",
+              "original_name": "test_prevent_edits_to_approved_documents",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_prevent_edits_to_approved_documents",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Prevent edits to approved documents",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006372457952238619,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"approved\" status",
+                  "status": "passed",
+                  "duration": 0.005173,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When any user attempts to edit the document",
+                  "status": "passed",
+                  "duration": 0.001088,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the edit is rejected",
+                  "status": "passed",
+                  "duration": 6e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating the document is locked",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-edits-to-documents-under-review",
+          "scenario_name": "Prevent edits to documents under review",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "prevent-edits-to-documents-under-review",
+              "test_name": "test_prevent_edits_to_documents_under_review",
+              "original_name": "test_prevent_edits_to_documents_under_review",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_prevent_edits_to_documents_under_review",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Prevent edits to documents under review",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.004352916963398457,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003343,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author attempts to edit the document",
+                  "status": "passed",
+                  "duration": 0.000904,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the edit is rejected",
+                  "status": "passed",
+                  "duration": 8e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating the document is under review",
+                  "status": "passed",
+                  "duration": 4e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reject-document-with-reason",
+          "scenario_name": "Reject document with reason",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "reject-document-with-reason",
+              "test_name": "test_reject_document_with_reason",
+              "original_name": "test_reject_document_with_reason",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_reject_document_with_reason",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Reject document with reason",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006029458018019795,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003101,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When a reviewer rejects the document",
+                  "status": "passed",
+                  "duration": 0.001718,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 0.001099,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the rejection reason is recorded",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "submit-document-for-review",
+          "scenario_name": "Submit document for review",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-1-document-lifecycle",
+              "scenario_id": "submit-document-for-review",
+              "test_name": "test_submit_document_for_review",
+              "original_name": "test_submit_document_for_review",
+              "nodeid": "tests/test_feature-1-document-lifecycle.py::test_submit_document_for_review",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "1: Document Lifecycle",
+              "scenario_name": "Submit document for review",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006251459009945393,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"draft\" status",
+                  "status": "passed",
+                  "duration": 0.001046,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author submits it for review",
+                  "status": "passed",
+                  "duration": 0.002657,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"review\"",
+                  "status": "passed",
+                  "duration": 0.001158,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And all assigned reviewers are notified",
+                  "status": "passed",
+                  "duration": 0.001292,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-2-multi-reviewer-approval",
+      "feature_name": "2: Multi-Reviewer Approval",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "notes-1",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "notes-1",
+              "test_name": "test_notes_1",
+              "original_name": "test_notes_1",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_notes_1",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "critical",
+              "status": "passed",
+              "duration": 0.014460582984611392,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then reviewer decisions are immutable once submitted",
+                  "status": "passed",
+                  "duration": 0.006219,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And approval order does not matter",
+                  "status": "passed",
+                  "duration": 0.008139,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-duplicate-approval-from-same-reviewer",
+          "scenario_name": "Prevent duplicate approval from same reviewer",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "prevent-duplicate-approval-from-same-reviewer",
+              "test_name": "test_prevent_duplicate_approval_from_same_reviewer",
+              "original_name": "test_prevent_duplicate_approval_from_same_reviewer",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_prevent_duplicate_approval_from_same_reviewer",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Prevent duplicate approval from same reviewer",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006110292044468224,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a reviewer who has already approved a document",
+                  "status": "passed",
+                  "duration": 0.004879,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they attempt to approve the same document again",
+                  "status": "passed",
+                  "duration": 0.001127,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the request is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating they have already submitted a decision",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reject-if-any-reviewer-rejects",
+          "scenario_name": "Reject if any reviewer rejects",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "reject-if-any-reviewer-rejects",
+              "test_name": "test_reject_if_any_reviewer_rejects",
+              "original_name": "test_reject_if_any_reviewer_rejects",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_reject_if_any_reviewer_rejects",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Reject if any reviewer rejects",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006323749898001552,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with multiple reviewers",
+                  "status": "passed",
+                  "duration": 0.003531,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When one reviewer rejects the document",
+                  "status": "passed",
+                  "duration": 0.001528,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 0.001155,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And remaining reviewers are no longer required to act",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "require-all-assigned-reviewers-to-approve",
+          "scenario_name": "Require all assigned reviewers to approve",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "require-all-assigned-reviewers-to-approve",
+              "test_name": "test_require_all_assigned_reviewers_to_approve",
+              "original_name": "test_require_all_assigned_reviewers_to_approve",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_require_all_assigned_reviewers_to_approve",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Require all assigned reviewers to approve",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.008497625007294118,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with three assigned reviewers",
+                  "status": "passed",
+                  "duration": 0.00353,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When only two reviewers have approved",
+                  "status": "passed",
+                  "duration": 0.003527,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document remains in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.001325,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the pending reviewer is visible in the status response",
+                  "status": "passed",
+                  "duration": 6e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "track-individual-reviewer-decisions-with-timestamps",
+          "scenario_name": "Track individual reviewer decisions with timestamps",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-2-multi-reviewer-approval",
+              "scenario_id": "track-individual-reviewer-decisions-with-timestamps",
+              "test_name": "test_track_individual_reviewer_decisions_with_timestamps",
+              "original_name": "test_track_individual_reviewer_decisions_with_timestamps",
+              "nodeid": "tests/test_feature-2-multi-reviewer-approval.py::test_track_individual_reviewer_decisions_with_timestamps",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "2: Multi-Reviewer Approval",
+              "scenario_name": "Track individual reviewer decisions with timestamps",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.006831499980762601,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.003382,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When a reviewer submits their decision",
+                  "status": "passed",
+                  "duration": 0.001939,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the decision is recorded with the reviewer ID and timestamp",
+                  "status": "passed",
+                  "duration": 0.001403,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the decision is visible in the document review history",
+                  "status": "passed",
+                  "duration": 2e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-3-delegation",
+      "feature_name": "3: Delegation",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "delegate-review-to-substitute-with-expiry-date",
+          "scenario_name": "Delegate review to substitute with expiry date",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "delegate-review-to-substitute-with-expiry-date",
+              "test_name": "test_delegate_review_to_substitute_with_expiry_date",
+              "original_name": "test_delegate_review_to_substitute_with_expiry_date",
+              "nodeid": "tests/test_feature-3-delegation.py::test_delegate_review_to_substitute_with_expiry_date",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Delegate review to substitute with expiry date",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007402750081382692,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a reviewer assigned to a document",
+                  "status": "passed",
+                  "duration": 0.003857,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they delegate to a substitute with an expiry date",
+                  "status": "passed",
+                  "duration": 0.003442,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the substitute is granted review permissions for that document",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the delegation record includes the expiry timestamp",
+                  "status": "passed",
+                  "duration": 1e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "delegator-can-revoke-delegation-before-expiry",
+          "scenario_name": "Delegator can revoke delegation before expiry",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "delegator-can-revoke-delegation-before-expiry",
+              "test_name": "test_delegator_can_revoke_delegation_before_expiry",
+              "original_name": "test_delegator_can_revoke_delegation_before_expiry",
+              "nodeid": "tests/test_feature-3-delegation.py::test_delegator_can_revoke_delegation_before_expiry",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Delegator can revoke delegation before expiry",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.008229542057961226,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given an active delegation",
+                  "status": "passed",
+                  "duration": 0.004835,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the delegator revokes the delegation",
+                  "status": "passed",
+                  "duration": 0.001756,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the substitute loses review permissions immediately",
+                  "status": "passed",
+                  "duration": 0.001542,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And subsequent actions by the substitute are rejected",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "expired-delegation-is-rejected",
+          "scenario_name": "Expired delegation is rejected",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "expired-delegation-is-rejected",
+              "test_name": "test_expired_delegation_is_rejected",
+              "original_name": "test_expired_delegation_is_rejected",
+              "nodeid": "tests/test_feature-3-delegation.py::test_expired_delegation_is_rejected",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Expired delegation is rejected",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "failed",
+              "duration": 0.005941082956269383,
+              "error": "client = <starlette.testclient.TestClient object at 0x1095b2db0>\n\n    @specleft(\n        feature_id=\"feature-3-delegation\",\n        scenario_id=\"expired-delegation-is-rejected\",\n    )\n    def test_expired_delegation_is_rejected(client):\n        \"\"\"Expired delegation is rejected\n    \n        Priority: medium\n        \"\"\"\n        with specleft.step(\"Given a delegation that has passed its expiry date\"):\n            author_id = \"author-1\"\n            delegator_id = \"reviewer-1\"\n            substitute_id = \"reviewer-2\"\n            create_response = create_document(client, author_id=author_id)\n            document_id = create_response.json()[\"id\"]\n            submit_document(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[delegator_id],\n            )\n            create_delegation(\n                client,\n                document_id=document_id,\n                delegator_id=delegator_id,\n                substitute_id=substitute_id,\n                expires_at=\"2001-01-01T00:00:00Z\",\n            )\n    \n        with specleft.step(\"When the substitute attempts to approve the document\"):\n>           approve_response = approve_document(\n                client,\n                document_id=document_id,\n                actor_id=substitute_id,\n                on_behalf_of=delegator_id,\n            )\n\ntests/test_feature-3-delegation.py:151: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:95: in approve_document\n    return client.post(f\"/documents/{document_id}/reviews/approve\", json=payload)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:155: in approve_document_endpoint\n    decision = services.approve_document(\napp/services.py:275: in approve_document\n    context = _resolve_actor(session, cycle.id, actor_id, on_behalf_of, _now())\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x1095b0dd0>, cycle_id = 1\nactor_id = 'reviewer-2', on_behalf_of = 'reviewer-1'\nnow = datetime.datetime(2026, 2, 11, 14, 33, 16, 490121, tzinfo=datetime.timezone.utc)\n\n    def _resolve_actor(\n        session: Session,\n        cycle_id: int,\n        actor_id: str,\n        on_behalf_of: str | None,\n        now: datetime,\n    ) -> DelegationContext:\n        if not on_behalf_of:\n            return DelegationContext(delegator_id=actor_id, acted_by=actor_id)\n    \n        delegation = (\n            session.execute(\n                select(Delegation)\n                .where(Delegation.cycle_id == cycle_id)\n                .where(Delegation.delegator_id == on_behalf_of)\n                .where(Delegation.substitute_id == actor_id)\n            )\n            .scalars()\n            .first()\n        )\n        if not delegation:\n            raise ApiError(\n                403, \"delegation_missing\", \"Delegation does not exist for this document\"\n            )\n        if delegation.revoked_at is not None:\n            raise ApiError(403, \"delegation_inactive\", \"Delegation has been revoked\")\n>       if delegation.expires_at <= now:\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:241: TypeError",
+              "steps": [
+                {
+                  "description": "Given a delegation that has passed its expiry date",
+                  "status": "passed",
+                  "duration": 0.00465,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute attempts to approve the document",
+                  "status": "failed",
+                  "duration": 0.0012,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-2",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "notes-2",
+              "test_name": "test_notes_2",
+              "original_name": "test_notes_2",
+              "nodeid": "tests/test_feature-3-delegation.py::test_notes_2",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "failed",
+              "duration": 0.01147124997805804,
+              "error": "client = <starlette.testclient.TestClient object at 0x1094b2de0>\n\n    @specleft(\n        feature_id=\"feature-3-delegation\",\n        scenario_id=\"notes-2\",\n    )\n    def test_notes_2(client):\n        \"\"\"Notes\n    \n        Priority: high\n        \"\"\"\n        with specleft.step(\"Then delegation does not transfer to other documents\"):\n            author_id = \"author-1\"\n            delegator_id = \"reviewer-1\"\n            substitute_id = \"reviewer-2\"\n            first_doc = create_document(client, author_id=author_id).json()[\"id\"]\n            second_doc = create_document(client, author_id=author_id).json()[\"id\"]\n            submit_document(\n                client,\n                document_id=first_doc,\n                author_id=author_id,\n                reviewer_ids=[delegator_id],\n            )\n            submit_document(\n                client,\n                document_id=second_doc,\n                author_id=author_id,\n                reviewer_ids=[delegator_id],\n            )\n            create_delegation(\n                client,\n                document_id=first_doc,\n                delegator_id=delegator_id,\n                substitute_id=substitute_id,\n                expires_at=\"2031-01-01T00:00:00Z\",\n            )\n            approve_other_response = approve_document(\n                client,\n                document_id=second_doc,\n                actor_id=substitute_id,\n                on_behalf_of=delegator_id,\n            )\n            assert_error(approve_other_response, status_code=403, code=\"delegation_missing\")\n    \n        with specleft.step(\n            \"And a reviewer can only have one active delegation per document\"\n        ):\n>           duplicate_response = create_delegation(\n                client,\n                document_id=first_doc,\n                delegator_id=delegator_id,\n                substitute_id=\"reviewer-3\",\n                expires_at=\"2031-01-01T00:00:00Z\",\n            )\n\ntests/test_feature-3-delegation.py:212: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:118: in create_delegation\n    return client.post(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:226: in create_delegation_endpoint\n    delegation = services.create_delegation(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x1095beb10>\ndocument_id = '7b664ad7-5ae9-4336-a965-a5014caf3c2d'\ndelegator_id = 'reviewer-1', substitute_id = 'reviewer-3'\nexpires_at = datetime.datetime(2031, 1, 1, 0, 0, tzinfo=TzInfo(0))\n\n    def create_delegation(\n        session: Session,\n        document_id: str,\n        delegator_id: str,\n        substitute_id: str,\n        expires_at: datetime,\n    ) -> Delegation:\n        document = _get_document(session, document_id)\n        cycle = _get_active_cycle(session, document_id)\n        if not cycle or document.status != \"review\":\n            raise ApiError(409, \"invalid_transition\", \"Document is not under review\")\n    \n        chain_check = (\n            session.execute(\n                select(Delegation)\n                .where(Delegation.cycle_id == cycle.id)\n                .where(Delegation.substitute_id == delegator_id)\n                .where(Delegation.revoked_at.is_(None))\n                .where(Delegation.expires_at > _now())\n            )\n            .scalars()\n            .first()\n        )\n        if chain_check:\n            raise ApiError(\n                403,\n                \"delegation_chain_forbidden\",\n                \"Re-delegation is not permitted\",\n            )\n    \n        assignments = _list_assignments(session, cycle.id)\n        _ensure_reviewer_assignment(assignments, delegator_id)\n    \n        existing = (\n            session.execute(\n                select(Delegation)\n                .where(Delegation.cycle_id == cycle.id)\n                .where(Delegation.delegator_id == delegator_id)\n            )\n            .scalars()\n            .first()\n        )\n>       if existing and existing.revoked_at is None and existing.expires_at > _now():\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:440: TypeError",
+              "steps": [
+                {
+                  "description": "Then delegation does not transfer to other documents",
+                  "status": "passed",
+                  "duration": 0.010073,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a reviewer can only have one active delegation per document",
+                  "status": "failed",
+                  "duration": 0.001253,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "prevent-delegation-chain",
+          "scenario_name": "Prevent delegation chain",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "prevent-delegation-chain",
+              "test_name": "test_prevent_delegation_chain",
+              "original_name": "test_prevent_delegation_chain",
+              "nodeid": "tests/test_feature-3-delegation.py::test_prevent_delegation_chain",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Prevent delegation chain",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007598624913953245,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a substitute who has been delegated review authority",
+                  "status": "passed",
+                  "duration": 0.006003,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute attempts to delegate to another person",
+                  "status": "passed",
+                  "duration": 0.001445,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the delegation is rejected",
+                  "status": "passed",
+                  "duration": 9e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating re-delegation is not permitted",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "substitute-can-approve-on-behalf-of-delegator",
+          "scenario_name": "Substitute can approve on behalf of delegator",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-3-delegation",
+              "scenario_id": "substitute-can-approve-on-behalf-of-delegator",
+              "test_name": "test_substitute_can_approve_on_behalf_of_delegator",
+              "original_name": "test_substitute_can_approve_on_behalf_of_delegator",
+              "nodeid": "tests/test_feature-3-delegation.py::test_substitute_can_approve_on_behalf_of_delegator",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "3: Delegation",
+              "scenario_name": "Substitute can approve on behalf of delegator",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "failed",
+              "duration": 0.006312167039141059,
+              "error": "client = <starlette.testclient.TestClient object at 0x10a01fbc0>\n\n    @specleft(\n        feature_id=\"feature-3-delegation\",\n        scenario_id=\"substitute-can-approve-on-behalf-of-delegator\",\n    )\n    def test_substitute_can_approve_on_behalf_of_delegator(client):\n        \"\"\"Substitute can approve on behalf of delegator\n    \n        Priority: medium\n        \"\"\"\n        with specleft.step(\"Given a valid delegation that has not expired\"):\n            author_id = \"author-1\"\n            delegator_id = \"reviewer-1\"\n            substitute_id = \"reviewer-2\"\n            create_response = create_document(client, author_id=author_id)\n            document_id = create_response.json()[\"id\"]\n            submit_document(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[delegator_id],\n            )\n            create_delegation(\n                client,\n                document_id=document_id,\n                delegator_id=delegator_id,\n                substitute_id=substitute_id,\n                expires_at=\"2031-01-01T00:00:00Z\",\n            )\n    \n        with specleft.step(\"When the substitute approves the document\"):\n>           approve_response = approve_document(\n                client,\n                document_id=document_id,\n                actor_id=substitute_id,\n                on_behalf_of=delegator_id,\n            )\n\ntests/test_feature-3-delegation.py:303: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:95: in approve_document\n    return client.post(f\"/documents/{document_id}/reviews/approve\", json=payload)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:155: in approve_document_endpoint\n    decision = services.approve_document(\napp/services.py:275: in approve_document\n    context = _resolve_actor(session, cycle.id, actor_id, on_behalf_of, _now())\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x10a5961e0>, cycle_id = 1\nactor_id = 'reviewer-2', on_behalf_of = 'reviewer-1'\nnow = datetime.datetime(2026, 2, 11, 14, 33, 16, 895984, tzinfo=datetime.timezone.utc)\n\n    def _resolve_actor(\n        session: Session,\n        cycle_id: int,\n        actor_id: str,\n        on_behalf_of: str | None,\n        now: datetime,\n    ) -> DelegationContext:\n        if not on_behalf_of:\n            return DelegationContext(delegator_id=actor_id, acted_by=actor_id)\n    \n        delegation = (\n            session.execute(\n                select(Delegation)\n                .where(Delegation.cycle_id == cycle_id)\n                .where(Delegation.delegator_id == on_behalf_of)\n                .where(Delegation.substitute_id == actor_id)\n            )\n            .scalars()\n            .first()\n        )\n        if not delegation:\n            raise ApiError(\n                403, \"delegation_missing\", \"Delegation does not exist for this document\"\n            )\n        if delegation.revoked_at is not None:\n            raise ApiError(403, \"delegation_inactive\", \"Delegation has been revoked\")\n>       if delegation.expires_at <= now:\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:241: TypeError",
+              "steps": [
+                {
+                  "description": "Given a valid delegation that has not expired",
+                  "status": "passed",
+                  "duration": 0.005022,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the substitute approves the document",
+                  "status": "failed",
+                  "duration": 0.001184,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-4-escalation",
+      "feature_name": "4: Escalation",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "auto-escalate-after-configurable-timeout",
+          "scenario_name": "Auto-escalate after configurable timeout",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "auto-escalate-after-configurable-timeout",
+              "test_name": "test_auto_escalate_after_configurable_timeout",
+              "original_name": "test_auto_escalate_after_configurable_timeout",
+              "nodeid": "tests/test_feature-4-escalation.py::test_auto_escalate_after_configurable_timeout",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Auto-escalate after configurable timeout",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "failed",
+              "duration": 0.006763249984942377,
+              "error": "client = <starlette.testclient.TestClient object at 0x10a595df0>\n\n    @specleft(\n        feature_id=\"feature-4-escalation\",\n        scenario_id=\"auto-escalate-after-configurable-timeout\",\n    )\n    def test_auto_escalate_after_configurable_timeout(client):\n        \"\"\"Auto-escalate after configurable timeout\n    \n        Priority: medium\n        \"\"\"\n        with specleft.step('Given a document in \"review\" status'):\n            author_id = \"author-1\"\n            reviewer_id = \"reviewer-1\"\n            create_response = create_document(client, author_id=author_id)\n            document_id = create_response.json()[\"id\"]\n            submit_document_with_start_time(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[reviewer_id],\n                escalation={\"timeout_hours\": 24, \"ladder\": [\"manager-1\"]},\n                start_at=\"2030-12-31T00:00:00Z\",\n            )\n    \n        with specleft.step(\n            \"When the configured timeout period elapses without all reviewers acting\"\n        ):\n>           trigger_response = trigger_escalation(\n                client, document_id=document_id, now=\"2031-01-01T01:00:00Z\"\n            )\n\ntests/test_feature-4-escalation.py:55: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:136: in trigger_escalation\n    return client.post(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:284: in trigger_escalation_endpoint\n    state = services.trigger_escalation(session, document_id, payload.now)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x10a5190a0>\ndocument_id = '28df868a-fe3b-4a64-9a5e-4d8db52cbc8b'\nnow = datetime.datetime(2031, 1, 1, 1, 0, tzinfo=TzInfo(0))\n\n    def trigger_escalation(\n        session: Session, document_id: str, now: datetime\n    ) -> EscalationState:\n        document = _get_document(session, document_id)\n        cycle = _get_active_cycle(session, document_id)\n        if not cycle or document.status != \"review\":\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not applicable\")\n        state = cycle.escalation_state\n        if not state:\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not configured\")\n>       if not state.next_escalation_at or now < state.next_escalation_at:\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:495: TypeError",
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status",
+                  "status": "passed",
+                  "duration": 0.004319,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the configured timeout period elapses without all reviewers acting",
+                  "status": "failed",
+                  "duration": 0.002309,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-notifies-next-level-approver",
+          "scenario_name": "Escalation notifies next-level approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-notifies-next-level-approver",
+              "test_name": "test_escalation_notifies_next_level_approver",
+              "original_name": "test_escalation_notifies_next_level_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_notifies_next_level_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation notifies next-level approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "failed",
+              "duration": 0.005879207979887724,
+              "error": "client = <starlette.testclient.TestClient object at 0x1094b22d0>\n\n    @specleft(\n        feature_id=\"feature-4-escalation\",\n        scenario_id=\"escalation-notifies-next-level-approver\",\n    )\n    def test_escalation_notifies_next_level_approver(client):\n        \"\"\"Escalation notifies next-level approver\n    \n        Priority: medium\n        \"\"\"\n        with specleft.step(\"Given a document that has been escalated\"):\n            author_id = \"author-1\"\n            reviewer_id = \"reviewer-1\"\n            create_response = create_document(client, author_id=author_id)\n            document_id = create_response.json()[\"id\"]\n            submit_document_with_start_time(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[reviewer_id],\n                escalation={\"timeout_hours\": 1, \"ladder\": [\"manager-1\"]},\n                start_at=\"2031-01-01T00:00:00Z\",\n            )\n>           trigger_escalation(client, document_id=document_id, now=\"2031-01-01T01:00:00Z\")\n\ntests/test_feature-4-escalation.py:90: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:136: in trigger_escalation\n    return client.post(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:284: in trigger_escalation_endpoint\n    state = services.trigger_escalation(session, document_id, payload.now)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x10a50b5f0>\ndocument_id = '03575123-d152-4132-93d4-97dd18a04e1c'\nnow = datetime.datetime(2031, 1, 1, 1, 0, tzinfo=TzInfo(0))\n\n    def trigger_escalation(\n        session: Session, document_id: str, now: datetime\n    ) -> EscalationState:\n        document = _get_document(session, document_id)\n        cycle = _get_active_cycle(session, document_id)\n        if not cycle or document.status != \"review\":\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not applicable\")\n        state = cycle.escalation_state\n        if not state:\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not configured\")\n>       if not state.next_escalation_at or now < state.next_escalation_at:\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:495: TypeError",
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated",
+                  "status": "failed",
+                  "duration": 0.005724,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "escalation-resets-timeout-for-new-approver",
+          "scenario_name": "Escalation resets timeout for new approver",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "escalation-resets-timeout-for-new-approver",
+              "test_name": "test_escalation_resets_timeout_for_new_approver",
+              "original_name": "test_escalation_resets_timeout_for_new_approver",
+              "nodeid": "tests/test_feature-4-escalation.py::test_escalation_resets_timeout_for_new_approver",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Escalation resets timeout for new approver",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "failed",
+              "duration": 0.004912208998575807,
+              "error": "client = <starlette.testclient.TestClient object at 0x10a583ef0>\n\n    @specleft(\n        feature_id=\"feature-4-escalation\",\n        scenario_id=\"escalation-resets-timeout-for-new-approver\",\n    )\n    def test_escalation_resets_timeout_for_new_approver(client):\n        \"\"\"Escalation resets timeout for new approver\n    \n        Priority: medium\n        \"\"\"\n        with specleft.step(\"Given a document that has been escalated to a new approver\"):\n            author_id = \"author-1\"\n            reviewer_id = \"reviewer-1\"\n            create_response = create_document(client, author_id=author_id)\n            document_id = create_response.json()[\"id\"]\n            submit_document_with_start_time(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[reviewer_id],\n                escalation={\"timeout_hours\": 1, \"ladder\": [\"manager-1\", \"director-1\"]},\n                start_at=\"2031-01-01T00:00:00Z\",\n            )\n>           trigger_escalation(client, document_id=document_id, now=\"2031-01-01T01:00:00Z\")\n\ntests/test_feature-4-escalation.py:128: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:136: in trigger_escalation\n    return client.post(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:284: in trigger_escalation_endpoint\n    state = services.trigger_escalation(session, document_id, payload.now)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x10a5e3350>\ndocument_id = 'ab22ab7d-fcdb-42dd-a4d7-f9842db6db42'\nnow = datetime.datetime(2031, 1, 1, 1, 0, tzinfo=TzInfo(0))\n\n    def trigger_escalation(\n        session: Session, document_id: str, now: datetime\n    ) -> EscalationState:\n        document = _get_document(session, document_id)\n        cycle = _get_active_cycle(session, document_id)\n        if not cycle or document.status != \"review\":\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not applicable\")\n        state = cycle.escalation_state\n        if not state:\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not configured\")\n>       if not state.next_escalation_at or now < state.next_escalation_at:\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:495: TypeError",
+              "steps": [
+                {
+                  "description": "Given a document that has been escalated to a new approver",
+                  "status": "failed",
+                  "duration": 0.004817,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-3",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "notes-3",
+              "test_name": "test_notes_3",
+              "original_name": "test_notes_3",
+              "nodeid": "tests/test_feature-4-escalation.py::test_notes_3",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "high",
+              "status": "failed",
+              "duration": 0.005352292093448341,
+              "error": "client = <starlette.testclient.TestClient object at 0x1095b2570>\n\n    @specleft(\n        feature_id=\"feature-4-escalation\",\n        scenario_id=\"notes-3\",\n    )\n    def test_notes_3(client):\n        \"\"\"Notes\n    \n        Priority: high\n        \"\"\"\n        with specleft.step(\n            \"Then escalation timeout is configurable per document or organization\"\n        ):\n            author_id = \"author-1\"\n            reviewer_id = \"reviewer-1\"\n            document_id = create_document(client, author_id=author_id).json()[\"id\"]\n            submit_document_with_start_time(\n                client,\n                document_id=document_id,\n                author_id=author_id,\n                reviewer_ids=[reviewer_id],\n                escalation={\"timeout_hours\": 2, \"ladder\": [\"manager-1\"]},\n                start_at=\"2031-01-01T00:00:00Z\",\n            )\n>           trigger = trigger_escalation(\n                client, document_id=document_id, now=\"2031-01-01T01:00:00Z\"\n            )\n\ntests/test_feature-4-escalation.py:167: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/helpers.py:136: in trigger_escalation\n    return client.post(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:546: in post\n    return super().post(\n.venv/lib/python3.12/site-packages/httpx/_client.py:1144: in post\n    return self.request(\n.venv/lib/python3.12/site-packages/starlette/testclient.py:445: in request\n    return super().request(\n.venv/lib/python3.12/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.12/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.12/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/testclient.py:348: in handle_request\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/testclient.py:345: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:334: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n../../../.pyenv/versions/3.12.5/lib/python3.12/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.12/site-packages/anyio/from_thread.py:259: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/applications.py:1138: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/applications.py:107: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:716: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:736: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/routing.py:290: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:121: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.12/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.12/site-packages/fastapi/routing.py:107: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/fastapi/routing.py:426: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.12/site-packages/fastapi/routing.py:316: in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/starlette/concurrency.py:32: in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/to_thread.py:63: in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:2502: in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py:986: in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\napp/main.py:284: in trigger_escalation_endpoint\n    state = services.trigger_escalation(session, document_id, payload.now)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nsession = <sqlalchemy.orm.session.Session object at 0x10a500410>\ndocument_id = '1708e679-2a7d-4c23-b45a-d9501dcfd7d3'\nnow = datetime.datetime(2031, 1, 1, 1, 0, tzinfo=TzInfo(0))\n\n    def trigger_escalation(\n        session: Session, document_id: str, now: datetime\n    ) -> EscalationState:\n        document = _get_document(session, document_id)\n        cycle = _get_active_cycle(session, document_id)\n        if not cycle or document.status != \"review\":\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not applicable\")\n        state = cycle.escalation_state\n        if not state:\n            raise ApiError(409, \"escalation_not_applicable\", \"Escalation is not configured\")\n>       if not state.next_escalation_at or now < state.next_escalation_at:\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: can't compare offset-naive and offset-aware datetimes\n\napp/services.py:495: TypeError",
+              "steps": [
+                {
+                  "description": "Then escalation timeout is configurable per document or organization",
+                  "status": "failed",
+                  "duration": 0.005229,
+                  "error": "can't compare offset-naive and offset-aware datetimes",
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+          "scenario_name": "Original reviewer can still approve before escalation triggers",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-4-escalation",
+              "scenario_id": "original-reviewer-can-still-approve-before-escalation-triggers",
+              "test_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "original_name": "test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "nodeid": "tests/test_feature-4-escalation.py::test_original_reviewer_can_still_approve_before_escalation_triggers",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "4: Escalation",
+              "scenario_name": "Original reviewer can still approve before escalation triggers",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007821250008419156,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document approaching the escalation timeout",
+                  "status": "passed",
+                  "duration": 0.003857,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the original reviewer submits their decision before the timeout",
+                  "status": "passed",
+                  "duration": 0.001786,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the escalation is cancelled",
+                  "status": "passed",
+                  "duration": 0.001032,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document proceeds through normal approval flow",
+                  "status": "passed",
+                  "duration": 0.001036,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "feature-5-edge-cases",
+      "feature_name": "5: Edge Cases",
+      "feature_priority": "medium",
+      "scenarios": [
+        {
+          "scenario_id": "concurrent-approval-and-rejection-by-different-reviewers",
+          "scenario_name": "Concurrent approval and rejection by different reviewers",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "concurrent-approval-and-rejection-by-different-reviewers",
+              "test_name": "test_concurrent_approval_and_rejection_by_different_reviewers",
+              "original_name": "test_concurrent_approval_and_rejection_by_different_reviewers",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_concurrent_approval_and_rejection_by_different_reviewers",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Concurrent approval and rejection by different reviewers",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.007640166906639934,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"review\" status with multiple reviewers",
+                  "status": "passed",
+                  "duration": 0.003361,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When one reviewer approves and another rejects simultaneously",
+                  "status": "passed",
+                  "duration": 0.003126,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the rejection takes precedence",
+                  "status": "passed",
+                  "duration": 0.00105,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And the document status changes to \"rejected\"",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "notes-4",
+          "scenario_name": "Notes",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "notes-4",
+              "test_name": "test_notes_4",
+              "original_name": "test_notes_4",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_notes_4",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Notes",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.009250624920241535,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Then conflict resolution rules are deterministic",
+                  "status": "passed",
+                  "duration": 0.008006,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And all edge case handling returns descriptive error messages",
+                  "status": "passed",
+                  "duration": 0.001144,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "resubmit-rejected-document-creates-new-review-cycle",
+          "scenario_name": "Resubmit rejected document creates new review cycle",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "resubmit-rejected-document-creates-new-review-cycle",
+              "test_name": "test_resubmit_rejected_document_creates_new_review_cycle",
+              "original_name": "test_resubmit_rejected_document_creates_new_review_cycle",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_resubmit_rejected_document_creates_new_review_cycle",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Resubmit rejected document creates new review cycle",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.008718166965991259,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"rejected\" status",
+                  "status": "passed",
+                  "duration": 0.004759,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author resubmits the document",
+                  "status": "passed",
+                  "duration": 0.001908,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the document status changes to \"review\"",
+                  "status": "passed",
+                  "duration": 0.001128,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And a new review cycle is created with fresh reviewer assignments",
+                  "status": "passed",
+                  "duration": 6e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And previous review history is preserved",
+                  "status": "passed",
+                  "duration": 0.000825,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "reviewer-who-is-also-the-author-cannot-approve-own-document",
+          "scenario_name": "Reviewer who is also the author cannot approve own document",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "reviewer-who-is-also-the-author-cannot-approve-own-document",
+              "test_name": "test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "original_name": "test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_reviewer_who_is_also_the_author_cannot_approve_own_document",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Reviewer who is also the author cannot approve own document",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.00446249998640269,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a user who is both the author and an assigned reviewer",
+                  "status": "passed",
+                  "duration": 0.003276,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When they attempt to approve the document",
+                  "status": "passed",
+                  "duration": 0.001079,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the approval is rejected",
+                  "status": "passed",
+                  "duration": 7e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating self-approval is not permitted",
+                  "status": "passed",
+                  "duration": 4e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        {
+          "scenario_id": "submit-document-with-no-reviewers-assigned-returns-error",
+          "scenario_name": "Submit document with no reviewers assigned returns error",
+          "is_parameterized": false,
+          "executions": [
+            {
+              "feature_id": "feature-5-edge-cases",
+              "scenario_id": "submit-document-with-no-reviewers-assigned-returns-error",
+              "test_name": "test_submit_document_with_no_reviewers_assigned_returns_error",
+              "original_name": "test_submit_document_with_no_reviewers_assigned_returns_error",
+              "nodeid": "tests/test_feature-5-edge-cases.py::test_submit_document_with_no_reviewers_assigned_returns_error",
+              "is_parameterized": false,
+              "parameters": {},
+              "feature_name": "5: Edge Cases",
+              "scenario_name": "Submit document with no reviewers assigned returns error",
+              "tags": [],
+              "feature_priority": "medium",
+              "scenario_priority": "medium",
+              "status": "passed",
+              "duration": 0.0019301669672131538,
+              "error": null,
+              "steps": [
+                {
+                  "description": "Given a document in \"draft\" status",
+                  "status": "passed",
+                  "duration": 0.000939,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "When the author submits the document with no reviewers assigned",
+                  "status": "passed",
+                  "duration": 0.000902,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "Then the submission is rejected",
+                  "status": "passed",
+                  "duration": 6e-06,
+                  "error": null,
+                  "skipped_reason": null
+                },
+                {
+                  "description": "And an error is returned indicating at least one reviewer is required",
+                  "status": "passed",
+                  "duration": 5e-06,
+                  "error": null,
+                  "skipped_reason": null
+                }
+              ]
+            }
+          ],
+          "summary": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        }
+      ]
+    }
+  ]
+}
