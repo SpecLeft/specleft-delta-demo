@@ -113,4 +113,4 @@ Full write-up: <!-- [Link to Dev.to article] -->
 
 - [SpecLeft](https://github.com/SpecLeft/specleft)
 - [SpecLeft Docs](https://specleft.dev)
-- [Case Study Article]((https://dev.to/dimwiddle/ai-agents-cant-mark-their-own-homework-case-study-1k9n-temp-slug-4608685?preview=c27887e1e520cff9d3025d6cd7812e4704f57ea86b231f26aee1a50e6b5acec7cdfc70d01c1d85d5af38a8bfbf3869370a87fe9a7aa39bd2e9453084))
+- [Case Study Article](https://dev.to/dimwiddle/ai-agents-cant-mark-their-own-homework-case-study-1k9n-temp-slug-4608685?preview=c27887e1e520cff9d3025d6cd7812e4704f57ea86b231f26aee1a50e6b5acec7cdfc70d01c1d85d5af38a8bfbf3869370a87fe9a7aa39bd2e9453084)
