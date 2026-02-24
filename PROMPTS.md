@@ -1,35 +1,54 @@
-## Workflow A — Baseline (No SpecLeft)
+# Implementation Prompt: Notification Rules Engine
 
-The agent gets a straightforward prompt:
+## Context
 
-```plaintext
+You are implementing a REST API project from a PRD. The SpecLeft MCP may be installed and available. If mcp.json is installed - use it to drive the full workflow: generate a behavioural spec, produce tests from that spec, implement the code to pass those tests, and raise a pull request. Otherwise, follow the instructions below to achieve the same outcome without the MCP tooling. The PRD and SKILLS documents are available to reference for requirements and design guidance.
 
-You are an autonomous agent guided by a planning-first workflow.
-Build a document approval API using FastAPI and SQLAlchemy.
-The project has had the initial setup already.
-Follow ../prd.md for product requirements.
-Follow ../SKILLS.md for instructions.
-Include tests and ensure they pass.
-Stop when all features are complete.
-Go with your own recommendations for system behaviour instead of verifying with me.
+Do not ask clarifying questions. All requirements are defined in the PRD. Make reasonable engineering decisions where the PRD is silent.
 
-```
+---
 
-## Workflow B — With SpecLeft
+## Prerequisites
 
-This time SpecLeft is installed as a dependency, and the prompt tells the agent to externalise behaviour before writing code:
+- Python 3.12 environment available
+- Git repository initialised with a `main` branch
+- GitHub CLI (`gh`) available and authenticated
 
-```plaintext
+**If SpecLeft MCP is available:**
+- Use SpecLeft MCP if the MCP config is setup in the project, otherwise follow your most suitable implementation workflow for this project that is not the SpecLeft process.
+- you must follow its resources and CLI workflow pattern.
+- If appropriate, update specleft prd-template.yml to exclude non feature headings from the spec generation.
 
-You are an autonomous agent guided by a planning-first workflow.
-Build a document approval API using FastAPI and SQLAlchemy.
-The project has had the initial setup already.
-Follow ../prd.md for product requirements.
-Follow ../SKILLS.md for instructions.
-Initialize SpecLeft and use its commands to externalize behaviour before implementation.
-I have installed v0.2.2.
-Only if required, use doc: https://github.com/SpecLeft/specleft/blob/main/AI_AGENTS.md for more context.
-Do not write implementation code until behaviour is explicit.
-Go with your own recommendations for system behaviour instead of verifying with me.
+---
 
-```
+## Resources
+
+**Product Requirements Doc**: PRD.md
+
+**Skill**: SKILLS.md
+
+---
+
+## Instructions
+
+1. Derive a behavioural spec from the PRD
+2. Produce tests from the spec before writing any implementation
+3. Implement the API to pass all tests
+4. Ensure all tests pass locally before proceeding
+5. Commit the implementation to the current branch
+6. Raise a pull request against `main` with a clear description of what was built and why
+
+Do not modify the tests to make them pass. Fix the implementation instead.
+
+### Retrospective
+
+ 1. Run server and verify behaviour set out in product requirements.
+ 2. Confirm all behaviour from PRD are covered (if using SpecLeft MCP, run: `specleft status`)
+ 2. Once behaviour is confirmed as working - briefly summarise retrospectively on how the implementation went for this project:
+- How many failed test runs before all tests pass
+- Effort spent on phases: spec externalisation, implementation, testing, behaviour verification
+- Clarity of project scope on each phase (letter grade scoring): spec externalisation, implementation, testing, behaviour verification
+- What went well with the workflow
+- what was missed or inefficient with your workflow
+- what would you do differently next time in terms of workflow or implementation approach
+3. Publish this retro in to the comments of the created PR
