@@ -42,11 +42,11 @@ Do not modify the tests to make them pass. Fix the implementation instead.
 
 ### Retrospective
 
- 1. Run server and verify behaviour in ../PRD.md.
+ 1. Run server and verify behaviour set out in product requirements.
  2. Confirm all behaviour from PRD are covered (if using SpecLeft MCP, run: `specleft status`)
  2. Once behaviour is confirmed as working - briefly summarise retrospectively on how the implementation went for this project:
 - How many failed test runs before all tests pass
-- Time spent on phases: spec externalisation, implementation, testing, behaviour verification
+- Effort spent on phases: spec externalisation, implementation, testing, behaviour verification
 - Clarity of project scope on each phase (letter grade scoring): spec externalisation, implementation, testing, behaviour verification
 - What went well with the workflow
 - what was missed or inefficient with your workflow
