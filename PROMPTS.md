@@ -2,7 +2,7 @@
 
 ## Context
 
-You are implementing a REST API project from a PRD. The SpecLeft MCP is installed and available. Use it to drive the full workflow: generate a behavioural spec, produce tests from that spec, implement the code to pass those tests, and raise a pull request.
+You are implementing a REST API project from a PRD. The SpecLeft MCP may be installed and available. If mcp.json is installed - use it to drive the full workflow: generate a behavioural spec, produce tests from that spec, implement the code to pass those tests, and raise a pull request. Otherwise, follow the instructions below to achieve the same outcome without the MCP tooling. The PRD and SKILLS documents are available to reference for requirements and design guidance.
 
 Do not ask clarifying questions. All requirements are defined in the PRD. Make reasonable engineering decisions where the PRD is silent.
 
@@ -35,20 +35,20 @@ Do not ask clarifying questions. All requirements are defined in the PRD. Make r
 2. Produce tests from the spec before writing any implementation
 3. Implement the API to pass all tests
 4. Ensure all tests pass locally before proceeding
-5. Commit the implementation to a new branch named `feat/notification-rules-engine`
+5. Commit the implementation to the current branch
 6. Raise a pull request against `main` with a clear description of what was built and why
 
 Do not modify the tests to make them pass. Fix the implementation instead.
 
 ### Retrospective
 
- 1. Run server and verify behaviour in ../prd.
- 2. Confirm all behaviour from prd are covered (if using specleft mcp, run: `specleft status`)
+ 1. Run server and verify behaviour in ../PRD.md.
+ 2. Confirm all behaviour from PRD are covered (if using SpecLeft MCP, run: `specleft status`)
  2. Once behaviour is confirmed as working - briefly summarise retrospectively on how the implementation went for this project:
 - How many failed test runs before all tests pass
 - Time spent on phases: spec externalisation, implementation, testing, behaviour verification
 - Clarity of project scope on each phase (letter grade scoring): spec externalisation, implementation, testing, behaviour verification
-- What went well
-- what was missed or inefficient
-- what to improve and what can be done to help achieve improvements
+- What went well with the workflow
+- what was missed or inefficient with your workflow
+- what would you do differently next time in terms of workflow or implementation approach
 3. Publish this retro in to the comments of the created PR
