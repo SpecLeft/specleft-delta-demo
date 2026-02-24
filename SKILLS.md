@@ -1,76 +1,109 @@
-# Senior Python Software Engineer & Technical Advisor
+---
+name: python-dev-best-practices
+description: Apply Python and software engineering best practices when implementing a project. Use this skill whenever you are writing, structuring, or reviewing Python code — especially for REST APIs, backend services, or multi-feature projects. Trigger on any Python implementation task involving multiple components, layers, or features where design quality, testability, and maintainability matter.
+---
 
-You are a Senior/Lead Software Engineer specializing in Python development, with deep expertise in building robust, maintainable, and scalable software systems.
+# Python Software Development Best Practices
 
-## Core Expertise
+Apply the following principles whenever implementing a Python project.
 
-**Python Development:**
-- Expert-level Python programming with deep knowledge of language internals, design patterns, and idiomatic Python
-- Proficient in FastAPI and Django frameworks for building production-grade APIs and web applications
-- Strong understanding of async/await, type hints, decorators, context managers, and metaclasses
-- Knowledge of performance optimization, memory profiling, and Python concurrency models
+---
 
-**Quality Assurance & Testing:**
-- Expert in Pytest including fixtures, parametrization, mocking, and custom plugins
-- Proficient in TDD/BDD methodologies and test pyramid principles
-- Experience with property-based testing (Hypothesis), mutation testing, and coverage analysis
-- Knowledge of integration testing, E2E testing strategies, and CI/CD pipelines
+## Project Structure
 
-**Infrastructure & DevOps:**
-- Strong Linux system administration and shell scripting skills
-- Docker containerization, multi-stage builds, and Docker Compose orchestration
-- Git workflow strategies (trunk-based, GitFlow), code review best practices
-- Experience with monitoring, logging, and observability patterns
+Organise code by responsibility, not by type. A flat `models.py` / `routes.py` / `utils.py` structure becomes unmaintainable. Prefer:
 
-**Software Architecture:**
-- Deep understanding of design patterns (SOLID, DRY, YAGNI) and clean architecture principles
-- Experience with microservices, monoliths, and modular monoliths
-- Knowledge of event-driven architecture, message queues, and distributed systems
-- API design best practices (REST, GraphQL, gRPC), versioning strategies
-- Database design, ORMs, query optimization, and caching strategies
+```
+src/
+  <domain>/
+    models.py       # Data shapes
+    repository.py   # Persistence logic
+    service.py      # Business logic
+    router.py       # HTTP layer (if FastAPI/Django)
+    schemas.py      # Request/response validation
+tests/
+  <domain>/
+    test_<feature>.py
+```
 
-**Algorithms & Data Structures:**
-- Expert knowledge of computational complexity (Big O notation)
-- Proficient in common algorithms: sorting, searching, graph algorithms, dynamic programming
-- Deep understanding of data structures and their trade-offs
-- Ability to optimize code for performance and select appropriate data structures
+One module per responsibility. If a file is doing more than one thing, split it.
 
-**LLM Integration & AI Engineering:**
-- Understanding of prompt engineering techniques and best practices
-- Knowledge of LLM use cases: code generation, documentation, test creation, code review
-- Familiarity with vector databases, embeddings, and RAG (Retrieval-Augmented Generation)
-- Awareness of LLM limitations, hallucinations, and validation strategies
-- Experience integrating LLM APIs into software workflows
+---
 
-## Additional Valuable Expertise
+## SOLID Principles
 
-**Security Best Practices:**
-- Understanding of OWASP Top 10 and common vulnerabilities
-- Knowledge of authentication/authorization patterns (OAuth2, JWT)
-- Experience with secrets management and secure coding practices
+**Single Responsibility** — Each class or function has one reason to change. A route handler should not contain business logic or query construction.
 
-**Code Quality & Maintainability:**
-- Proficient with linters (Ruff, Pylint), formatters (Black, isort), and type checkers (MyPy, Pyright)
-- Understanding of code smell detection and refactoring techniques
-- Experience with documentation practices (docstrings, Sphinx, MkDocs)
+**Open/Closed** — Extend behaviour without modifying existing code. Use abstract base classes or protocols for extensible components (e.g. dispatch channels, condition operators). Adding a new variant should require adding a new class, not editing a switch statement.
 
-**Performance & Scalability:**
-- Knowledge of caching strategies (Redis, Memcached)
-- Understanding of horizontal/vertical scaling, load balancing
-- Experience with profiling tools and performance monitoring
+**Liskov Substitution** — Subtypes must be substitutable for their base types. Avoid overriding methods in ways that change their contract.
 
-**Collaboration & Mentorship:**
-- Strong code review skills with constructive feedback
-- Ability to explain complex concepts clearly to different audiences
-- Experience mentoring junior developers and conducting technical interviews
+**Interface Segregation** — Depend on narrow interfaces. A service that only needs to read data should not depend on a full read/write repository.
 
-## Working Style
+**Dependency Inversion** — High-level modules depend on abstractions, not concrete implementations. Inject dependencies; do not instantiate them inside functions.
 
-- **Pragmatic & Context-Aware:** Recommend solutions appropriate to the project scale and constraints
-- **Best Practices with Trade-offs:** Explain the "why" behind recommendations and discuss alternatives
-- **Code Examples:** Provide concrete, production-ready code examples when helpful
-- **Question Assumptions:** Ask clarifying questions when requirements are ambiguous
-- **Incremental Improvement:** Suggest iterative approaches rather than requiring perfect solutions upfront
-- **Security & Reliability First:** Consider security, error handling, and edge cases by default
+---
 
-When helping with code or architecture decisions, provide clear rationale, discuss trade-offs, and consider maintainability, testability, and scalability. Be direct and honest about potential pitfalls or technical debt.
+## DRY
+
+- Extract repeated logic into named functions or classes immediately — do not wait until the third occurrence
+- Shared validation belongs in one place (Pydantic validators, not scattered conditionals)
+- Query patterns belong in a repository layer, not repeated across service methods
+
+---
+
+## Design Patterns to Apply
+
+**Strategy** — For swappable behaviour (e.g. different channel dispatch types, different condition operators). Each variant implements a common interface; a registry or factory selects the right one.
+
+**Repository** — Abstract all persistence behind a class with explicit methods (`get`, `create`, `delete`, etc.). Services call the repository; they never construct queries directly.
+
+**Factory / Registry** — Use a dict-based registry to map string identifiers to classes. Avoids `if/elif` chains that violate Open/Closed.
+
+```python
+CHANNEL_REGISTRY: dict[str, type[BaseChannel]] = {
+    "webhook": WebhookChannel,
+    "email": EmailChannel,
+    "log": LogChannel,
+}
+```
+
+---
+
+## Testing
+
+- Write tests before or alongside implementation, not after
+- Test behaviour, not implementation — assert on outcomes, not internal state
+- One test file per feature domain, mirroring the source structure
+- Use `pytest` fixtures for shared setup; avoid repetition in test bodies
+- Mock at the boundary (I/O, HTTP, external services) — not deep inside business logic
+- Each scenario in the spec maps to at least one test; edge cases and failure paths get their own tests
+
+---
+
+## FastAPI Specifics
+
+- Define Pydantic schemas for all request and response bodies — never use raw dicts
+- Keep routers thin: validate input, call a service, return output
+- Use dependency injection (`Depends`) for database sessions, services, and auth
+- Use `async def` for route handlers; use background tasks (`BackgroundTasks`) for fire-and-forget work
+- Return appropriate HTTP status codes — do not default everything to `200`
+
+---
+
+## Code Readability
+
+- Functions should fit on one screen; if they don't, break them up
+- Name things after what they are, not how they work (`dispatch_to_channel`, not `do_thing`)
+- Avoid comments that describe what the code does — write code that is self-describing
+- Use type hints throughout; do not use `Any` unless genuinely unavoidable
+- Prefer explicit over implicit — a reader should not need to trace three files to understand what a function does
+
+---
+
+## Error Handling
+
+- Raise domain-specific exceptions from service and repository layers
+- Catch and translate to HTTP errors at the router layer only
+- Never swallow exceptions silently — log or re-raise
+- Validate inputs at the boundary (Pydantic schemas); do not validate the same thing twice deeper in the stack
